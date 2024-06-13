@@ -1,0 +1,352 @@
+@import "../node_modules/toaster-js/default.scss" ;
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #faf3e0;
+    color: #333;
+}
+
+header {
+    background-color: #d35400;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #d35400;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    left: 0;
+    
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Search Section Styles */
+.search-section {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+ 
+    text-align: center;
+}
+
+.search-section h2 {
+    text-align: center;
+}
+
+.mySearchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mySearchBar div {
+    margin-bottom: 10px;
+}
+
+.mySearchBar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.mySearchBar button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.mySearchBar button:hover {
+    background-color: #c0392b;
+}
+
+/* Content Section Styles */
+.content-section {
+    display: flex;
+    gap: 20px;
+}
+
+/* Add Recipe Section Styles */
+.add-recipe-section {
+    flex: 1;
+    text-align: center;
+}
+
+.add-recipe-section h2 {
+    text-align: center;
+}
+
+.addRecettes {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.addRecettes input[type="text"],
+.addRecettes textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.addRecettes button {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addRecettes button:hover {
+    background-color: #1e8449;
+}
+
+/* Recipes Section Styles */
+#recettes {
+    flex: 2;
+    text-align: center;
+    cursor: pointer;
+}
+
+#recettes h2 {
+    text-align: center;
+}
+
+.containerRecettes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.recette {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.recette:hover {
+    transform: scale(1.05);
+}
+
+.recette h3 {
+    color: #d35400;
+    margin-bottom: 10px;
+}
+
+.recette p {
+    color: #555;
+}
+
+/* Modal Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 999;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+    z-index: 1000;
+}
+
+.modal.modalOpen {
+    display: block;
+}
+
+.modal_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal_close svg {
+    width: 24px;
+    height: 24px;
+}
+
+.modal_body {
+    margin-top: 20px;
+}
+
+.modal_body h3 {
+    color: #d35400;
+}
+
+.modal_body p {
+    color: #555;
+    margin: 5px 0;
+}
+
+.modal_body p.styled {
+    color: white;
+    margin: 5px 0;
+}
+
+.modal_body p.styled:hover {
+    color: green;
+    margin: 5px 0;
+}
+
+.modal_body strong {
+    font-weight: bold;
+}
+
+.modal_body input[type="text"],
+.modal_body textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttonModal {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.buttonModal button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonModal button#recetteDelete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.buttonModal button#recetteDelete:hover {
+    background-color: #c0392b;
+}
+
+.buttonModal button#recetteModif,
+.buttonModal button#recetteSave {
+    background-color: #27ae60;
+    color: white;
+}
+
+.buttonModal button#recetteModif:hover,
+.buttonModal button#recetteSave:hover {
+    background-color: #1e8449;
+}
+
+.buttonModal button#recetteCancel {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.buttonModal button#recetteCancel:hover {
+    background-color: #7f8c8d;
+}
+
+/* Ingredients Styles */
+.ingrAdd,
+.ingrDB {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.ingredients {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ingredients:hover {
+    background-color: #f0f0f0;
+    color: green;
+}
+
+.styled {
+    background-color: #d35400;
+    color: white;
+}
+
+/* Responsive Styles for small screens */
+@media (max-width: 650px) {
+    .content-section {
+        flex-direction: column;
+    }
+
+    .add-recipe-section {
+        order: 2;
+        margin-top: 20px;
+    }
+
+    #recettes {
+        order: 1;
+    }
+}

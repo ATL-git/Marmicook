@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Marmicook</h1>
+    </header>
+    <main>
+        <section class="search-section">
+            <div class="search-recette">
+                <h2>Je recherche une recette</h2>
+                <div class="mySearchBar">
+                    <div>
+                        <label for="searchCategorie">Categorie</label>
+                        <input type="radio" id="searchCategorie" name="searchOption" value="categorie">
+                        <label for="searchName">Nom de recette</label>
+                        <input type="radio" id="searchName" name="searchOption" value="titre">
+                    </div>
+                    <div>
+                        <input type="text" id="searchBar" placeholder="Rechercher une recette...">
+                        <button onclick="searchRecette()">Rechercher</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="add-recipe-section">
+                <h2>Je rajoute une recette</h2>
+                <div class="addRecettes">
+                    <input type="text" id="titre" placeholder="Titre...">
+                    <div class="ingrAdd"></div>
+                    <input type="text" id="tempsPrepa" placeholder="Temps de préparation...">
+                    <input type="text" id="tempsCuisson" placeholder="Temps de cuisson...">
+                    <input type="text" id="difficulte" placeholder="Difficulté...">
+                    <input type="text" id="categorie" placeholder="Categorie...">
+                    <textarea id="instructions" placeholder="Instructions..."></textarea>
+                    <button onclick="addRecette()">Ajouter</button>
+                </div>
+            </div>
+            <div id="recettes">
+                <h2 class="recetteTitle">Mes recettes</h2>
+                <div class="containerRecettes"></div>
+                <div class="overlay"></div>
+                <div class="modal">
+                    <div class="modal_close" onclick="closeModal()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                    <div class="modal_body"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Tous droits réservés Marmicook.fr - 1990-2024</p>
+    </footer>
+    <script src="./assets/javascript/script.js"></script>
+</body>
+
+</html>
